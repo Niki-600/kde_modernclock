@@ -23,6 +23,8 @@ Kirigami.ScrollablePage {
     property alias cfg_time_character: timeCharacter.text
     property alias cfg_date_format: dateFormat.text
     property alias cfg_date_font_color: dateFontColor.color
+    property alias cfg_translate_date: translateDate.checked
+    property alias cfg_translate_day: translateDay.checked
 
     Kirigami.FormLayout {
         Title {
@@ -34,6 +36,14 @@ Kirigami.ScrollablePage {
             }
             CheckBox {
                 id: showDay
+            }
+        }
+        RowLayout {
+            Label {
+                text: i18n("Translate Day")
+            }
+            CheckBox {
+                id: translateDay
             }
         }
         NumberField {
@@ -57,6 +67,14 @@ Kirigami.ScrollablePage {
             }
             CheckBox {
                 id: showDate
+            }
+        }
+        RowLayout {
+            Label {
+                text: i18n("Translate Day")
+            }
+            CheckBox {
+                id: translateDate
             }
         }
         NumberField {
